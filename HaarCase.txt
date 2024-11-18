@@ -1,0 +1,92 @@
+# Importación de Librerías
+from flask import Flask, render_template, Response
+import cv2
+import numpy as np
+import os
+
+# Cargar imágenes de referencia para reconocimiento facial
+known_face_names = []
+known_face_images = []
+
+# Carpeta con imágenes de personas conocidas
+path_to_images = "known_faces"  # Cambia esta ruta según tus archivos
+for filename in os.listdir(path_to_images):
+    if filename.endswith(".jpg") or filename.endswith(".png"):
+        image_path = os.path.join(path_to_images, filename)
+        image = cv2.imread(image_path)
+        known_face_images.append(image)
+        known_face_names.append(os.path.splitext(filename)[0])  # Usa el nombre del archivo como etiqueta
+
+# Cargar el clasificador de Haar Cascade para detección de rostros
+face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+
+# Inicialización de captura de video
+cap = cv2.VideoCapture(0)
+
+# Función para obtener los frames de la cámara
+def gen_frame():
+    while True:
+        ret, frame = cap.read()
+        if not ret:
+            break
+
+        # Convertir la imagen a escala de grises para usar Haar Cascade
+        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+        # Detectar los rostros en la imagen
+        faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
+
+        for (x, y, w, h) in faces:
+            # Recortar la región del rostro detectado
+            face_roi = frame[y:y+h, x:x+w]
+
+            # Inicializar el nombre como desconocido
+            name = "Desconocido"
+
+            # Comparar el rostro detectado con las imágenes conocidas utilizando matchTemplate
+            best_match_value = float('inf')
+            for known_image, known_name in zip(known_face_images, known_face_names):
+                # Redimensionar la imagen conocida al tamaño del rostro detectado
+                resized_known_image = cv2.resize(known_image, (w, h))
+
+                # Realizar la comparación de plantillas (template matching)
+                result = cv2.matchTemplate(face_roi, resized_known_image, cv2.TM_CCOEFF_NORMED)
+
+                # Obtener el valor máximo de la comparación de plantillas
+                _, max_val, _, _ = cv2.minMaxLoc(result)
+
+                # Si el valor máximo es menor que el valor de mejor coincidencia, actualizar el nombre
+                if max_val > 0.6:  # Umbral de similitud, puedes ajustarlo según sea necesario
+                    if max_val < best_match_value:
+                        best_match_value = max_val
+                        name = known_name
+
+            # Dibujar un rectángulo alrededor del rostro y poner el nombre
+            cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
+            cv2.putText(frame, name, (x + 6, y + h - 6), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 1)
+
+        # Codificar la imagen en formato JPEG
+        suc, encode = cv2.imencode('.jpg', frame)
+        frame = encode.tobytes()
+
+        yield (b'--frame\r\n'
+               b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+
+# Crear la aplicación Flask
+app = Flask(__name__)
+
+# Ruta principal
+@app.route('/')
+def index():
+    return render_template('Index.html')
+
+# Ruta de video
+@app.route('/video')
+def video():
+    return Response(gen_frame(), mimetype='multipart/x-mixed-replace; boundary=frame')
+
+# Ejecutar la web
+if __name__ == "__main__":
+    app.run(debug=True)
+    cap.release()
+    cv2.destroyAllWindows()
