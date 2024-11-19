@@ -38,7 +38,7 @@ def gen_frame():
 
         for (top, right, bottom, left), face_encoding in zip(face_locations, face_encodings):
             matches = face_recognition.compare_faces(known_face_encodings, face_encoding)
-            name = "Desconocido"
+            name = "Acceso denegado"
 
             # Usar el rostro reconocido con menor distancia
             face_distances = face_recognition.face_distance(known_face_encodings, face_encoding)
@@ -70,7 +70,7 @@ app = Flask(__name__)
 # Ruta principal
 @app.route('/')
 def index():
-    return render_template('Index.html')
+    return render_template('AI-html-1.0.0/index.html')
 
 # Ruta de video
 @app.route('/video')

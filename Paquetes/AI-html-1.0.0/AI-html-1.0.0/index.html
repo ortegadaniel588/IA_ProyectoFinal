@@ -3,35 +3,33 @@
 
 <head>
     <meta charset="utf-8">
-    <title>AI.Tech - Inteligencia Artificial</title>
+    <title>AI.Tech - Artificial Intelligence HTML Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
- <!-- Favicon -->
-<!--<link href="{{ url_for('static', filename='img/favicon.ico') }}" rel="icon">-->
-    <link rel="icon" href="{{ url_for('static', filename='img/ico1.ico') }}" type="image/x-icon">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
 
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap"
+        rel="stylesheet">
 
-<!-- Google Web Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-<!-- Icon Font Stylesheet -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-<!-- Libraries Stylesheet -->
-<link href="{{ url_for('static', filename='lib/animate/animate.min.css') }}" rel="stylesheet">
-<link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Customized Bootstrap Stylesheet -->
-<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
-
-<!-- Template Stylesheet -->
-<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
-
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -39,7 +37,7 @@
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Cargando...</span>
+            <span class="sr-only">Loading...</span>
         </div>
     </div>
     <!-- Spinner End -->
@@ -47,16 +45,10 @@
 
     <!-- Navbar Start -->
     <div class="container-fluid sticky-top">
-        <div style="position: absolute; margin-top: 5px; transform: scale(0.8); transform-origin: top left;" >
-            <img src="{{url_for('static', filename='img/f.png')}}" style="height: 87px; float: left;">
-            <div style="background-color: rgba(212, 175, 55, 0.7); width: 3px; height: 87px; float: left; margin-right: 10px;"></div>
-            <p style="float: left; color: white; font-size:16px"><br>Sistema de Gestión<br> de Detección y Seguimiento de Caras</p>
-        </div>
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark p-0">
                 <a href="index.html" class="navbar-brand">
-                    <!--<h1 class="text-white">AI<span class="text-dark">.</span>Tech</h1>-->
-
+                    <h1 class="text-white">AI<span class="text-dark">.</span>Tech</h1>
                 </a>
                 <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
@@ -64,24 +56,24 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
-                        <a href="#" class="nav-item nav-link active">Inicio</a>
-                        <a href="#acerca" class="nav-item nav-link">Acerca de</a>
-                        <a href="#service" class="nav-item nav-link">Servicios</a>
-                        <a href="#caracter" class="nav-item nav-link">Proyecto</a>
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
+                        <a href="project.html" class="nav-item nav-link">Projects</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Páginas</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu bg-light mt-2">
-                                <a href="#caracter" class="dropdown-item">Características</a>
-                                <a href="#team" class="dropdown-item">Nuestro equipo</a>
-                                <!--<a href="#question" class="dropdown-item">Preguntas frecuentes</a>-->
-                                <!--<a href="testimonial.html" class="dropdown-item">Testimonial</a>-->
-                                <!--<a href="404.html" class="dropdown-item">404 Page</a>-->
+                                <a href="feature.html" class="dropdown-item">Features</a>
+                                <a href="team.html" class="dropdown-item">Our Team</a>
+                                <a href="faq.html" class="dropdown-item">FAQs</a>
+                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                <a href="404.html" class="dropdown-item">404 Page</a>
                             </div>
                         </div>
-                        <a href="#contact" class="nav-item nav-link">Contacto</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
-                    <button type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal"
-                        data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
+                    <butaton type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal"
+                        data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
                 </div>
             </nav>
         </div>
@@ -92,17 +84,17 @@
     <!-- Hero Start -->
     <div class="container-fluid pt-5 bg-primary hero-header mb-5">
         <div class="container pt-5">
-            <div class="row g-5 pt-5" style="padding-top:5px!important">
-                <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5" style="margin-top:2px !important">
-                    <!--<div class="btn btn-sm border rounded-pill text-white px-3 mb-3 animated slideInRight">AI.Tech</div>-->
-                    <h1 class="display-6 text-white mb-4 animated slideInRight">Inteligencia artificial</h1>
-                        <img src="{{url_for('video')}}" width="100%" height="100%" style="border-radius: 30px;"/>
-                    <!--<a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInRight">Read More</a>
-                    <a href="" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>-->
+            <div class="row g-5 pt-5">
+                <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
+                    <div class="btn btn-sm border rounded-pill text-white px-3 mb-3 animated slideInRight">AI.Tech</div>
+                    <h1 class="display-4 text-white mb-4 animated slideInRight">Artificial Intelligence for Your Business</h1>
+                    <p class="text-white mb-4 animated slideInRight">Tempor rebum no at dolore lorem clita rebum rebum ipsum
+                        rebum stet dolor sed justo kasd. Ut dolor sed magna dolor sea diam. Sit diam sit</p>
+                    <a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInRight">Read More</a>
+                    <a href="" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
                 </div>
                 <div class="col-lg-6 align-self-end text-center text-lg-end">
-                    <p class="text-white mb-4 animated slideInRight">Detección y Seguimiento de Caras en Tiempo Real para Acceso Seguro</p>
-                    <img class="img-fluid" src="{{ url_for('static', filename='img/hero-img.png') }}" alt="">
+                    <img class="img-fluid" src="img/hero-img.png" alt="">
                 </div>
             </div>
         </div>
@@ -133,30 +125,33 @@
 
     <!-- About Start -->
     <div class="container-fluid py-5">
-        <div class="container" id="#acerca">
+        <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <div class="about-img">
-                        <img class="img-fluid" src="{{ url_for('static', filename='img/about-img.jpg') }}">
+                        <img class="img-fluid" src="img/about-img.jpg">
                     </div>
                 </div>
-                <div id="acerca" class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Acerca de</div>
-                    <h1 class="mb-4">Inteligencia Artificial</h1>
-                    <p class="mb-4">
-La inteligencia artificial (IA) es un campo de la informática que se enfoca en crear sistemas y máquinas capaces de realizar tareas que normalmente requieren de la inteligencia humana. Estas tareas incluyen el razonamiento, aprendizaje, percepción, toma de decisiones, comprensión del lenguaje natural, y más. La IA trata de replicar, mejorar o simular las habilidades cognitivas humanas mediante algoritmos y modelos matemáticos.</p>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">About Us</div>
+                    <h1 class="mb-4">We Make Your Business Smarter with Artificial Intelligence</h1>
+                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam
+                        amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus
+                        clita duo justo et tempor eirmod magna dolore erat amet</p>
+                    <p class="mb-4">Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no
+                        labore lorem sit. Sanctus clita duo justo et tempor.</p>
                     <div class="row g-3">
                         <div class="col-sm-6">
-                            <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Automatización de tareas repetitivas</h6>
-                            <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Mejor toma de decisiones</h6>
+                            <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Award Winning</h6>
+                            <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Professional Staff</h6>
                         </div>
                         <div class="col-sm-6">
-                            <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Personalización</h6>
-                            <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Optimización de recursos:</h6>
+                            <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>24/7 Support</h6>
+                            <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Fair Prices</h6>
                         </div>
                     </div>
                     <div class="d-flex align-items-center mt-4">
-                        <a class="btn btn-primary rounded-pill px-4 me-3" href="">Leer más</a>
+                        <a class="btn btn-primary rounded-pill px-4 me-3" href="">Read More</a>
                         <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-instagram"></i></a>
@@ -174,18 +169,12 @@ La inteligencia artificial (IA) es un campo de la informática que se enfoca en 
         <div class="container py-5">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
-                    <div id="service" class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Nuestros servicios</div>
-                    <h1 class="mb-4">Beneficios de la inteligencia artificial</h1>
-                    <p class="mb-4">La inteligencia artificial (IA) ofrece diversos beneficios, como la automatización de tareas repetitivas, lo que aumenta la productividad al liberar a los empleados de trabajos monótonos. Además, facilita una mejor toma de decisiones al analizar grandes volúmenes de datos, proporcionando información clave para optimizar procesos. La IA también permite personalizar la experiencia del usuario, especialmente en marketing y comercio electrónico, lo que mejora la satisfacción y aumenta las ventas. Por último, optimiza el uso de recursos al predecir la demanda y gestionar inventarios, lo que reduce desperdicios y mejora la eficiencia operativa, contribuyendo incluso a la sostenibilidad.
-
-
-
-
-
-
-
-Diam dolor diam ipsum et tempor sit</p>
-                    <a class="btn btn-primary rounded-pill px-4" href="">Leer más</a>
+                    <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Our Services</div>
+                    <h1 class="mb-4">Our Excellent AI Solutions for Your Business</h1>
+                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam
+                        amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus
+                        clita duo justo et tempor eirmod magna dolore erat amet</p>
+                    <a class="btn btn-primary rounded-pill px-4" href="">Read More</a>
                 </div>
                 <div class="col-lg-7">
                     <div class="row g-4">
@@ -196,9 +185,10 @@ Diam dolor diam ipsum et tempor sit</p>
                                         <div class="service-icon btn-square">
                                             <i class="fa fa-robot fa-2x"></i>
                                         </div>
-                                        <h5 class="mb-3">Automatización robótica</h5>
-                                        <p>La automatización robótica utiliza robots y sistemas automatizados para realizar tareas repetitivas y de alta precisión, con el fin de aumentar la eficiencia y reducir los errores humanos en entornos industriales y de producción. Estos sistemas pueden realizar tareas como ensamblaje, soldadura, pintura y embalaje, y están diseñados para operar de forma autónoma o controlada mediante software especializado.</p>
-                                        <a class="btn px-3 mt-auto mx-auto" href="">Leer más</a>
+                                        <h5 class="mb-3">Robotic Automation</h5>
+                                        <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet
+                                            diam sed stet lorem.</p>
+                                        <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
                                     </div>
                                 </div>
                                 <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
@@ -206,9 +196,10 @@ Diam dolor diam ipsum et tempor sit</p>
                                         <div class="service-icon btn-square">
                                             <i class="fa fa-power-off fa-2x"></i>
                                         </div>
-                                        <h5 class="mb-3">Aprendizaje automático</h5>
-                                        <p>El aprendizaje automático es una rama de la inteligencia artificial que permite a los sistemas aprender de los datos sin ser programados explícitamente para hacerlo. Utiliza algoritmos y modelos matemáticos para identificar patrones en los datos, hacer predicciones y tomar decisiones. Esta tecnología es fundamental en aplicaciones como el reconocimiento de imágenes, la predicción de tendencias y la recomendación de productos.</p>
-                                        <a class="btn px-3 mt-auto mx-auto" href="">Leer más</a>
+                                        <h5 class="mb-3">Machine learning</h5>
+                                        <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet
+                                            diam sed stet lorem.</p>
+                                        <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -220,9 +211,10 @@ Diam dolor diam ipsum et tempor sit</p>
                                         <div class="service-icon btn-square">
                                             <i class="fa fa-graduation-cap fa-2x"></i>
                                         </div>
-                                        <h5 class="mb-3">Educación y ciencia</h5>
-                                        <p>Las tecnologías aplicadas a la educación y la ciencia abarcan el uso de herramientas digitales, plataformas de aprendizaje en línea y software especializado para mejorar la enseñanza y la investigación. En el ámbito educativo, estas tecnologías permiten una educación más accesible y personalizada, mientras que en la ciencia, facilitan la recopilación y análisis de datos, la simulación de experimentos y la colaboración global.</p>
-                                        <a class="btn px-3 mt-auto mx-auto" href="">Leer más</a>
+                                        <h5 class="mb-3">Education & Science</h5>
+                                        <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet
+                                            diam sed stet lorem.</p>
+                                        <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
                                     </div>
                                 </div>
                                 <div class="col-12 wow fadeIn" data-wow-delay="0.7s">
@@ -230,9 +222,10 @@ Diam dolor diam ipsum et tempor sit</p>
                                         <div class="service-icon btn-square">
                                             <i class="fa fa-brain fa-2x"></i>
                                         </div>
-                                        <h5 class="mb-3">Análisis predictivo</h5>
-                                        <p>El análisis predictivo utiliza técnicas estadísticas, de minería de datos y algoritmos de aprendizaje automático para analizar datos históricos y hacer predicciones sobre eventos futuros. Esta tecnología es útil en áreas como la gestión empresarial, el pronóstico de ventas, la prevención de riesgos y la optimización de procesos, ya que permite tomar decisiones informadas basadas en patrones y tendencias identificados en los datos.</p>
-                                        <a class="btn px-3 mt-auto mx-auto" href="">Leer más</a>
+                                        <h5 class="mb-3">Predictive Analysis</h5>
+                                        <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet
+                                            diam sed stet lorem.</p>
+                                        <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -250,26 +243,27 @@ Diam dolor diam ipsum et tempor sit</p>
         <div class="container pt-5">
             <div class="row g-5">
                 <div class="col-lg-6 align-self-center mb-md-5 pb-md-5 wow fadeIn" data-wow-delay="0.3s">
-                    <div id="caracter" class="btn btn-sm border rounded-pill text-white px-3 mb-3">IA</div>
-                    <h1 class="text-white mb-4">Detección y Seguimiento de Caras con Face_recognition</h1>
-                    <p class="text-light mb-4">El reconocimiento facial para acceso seguro, utilizando el paquete face_recognition en Python, funciona mediante la identificación y verificación de una persona a partir de sus características faciales únicas. Primero, se registra una foto de la persona autorizada y se extraen sus "encodings" faciales, que son representaciones matemáticas de los puntos clave en la cara (como los ojos, nariz, boca, etc.). Luego, cuando alguien intenta acceder a un sistema, se captura una imagen en tiempo real y se generan los "encodings" faciales de esa persona. Estos se comparan con los "encodings" almacenados de las personas autorizadas. Si la coincidencia es suficiente, el acceso es concedido. Este proceso garantiza que solo las personas previamente registradas puedan acceder al sistema, proporcionando un método seguro y eficiente de autenticación basado en características físicas.</p>
+                    <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">Why Choose Us</div>
+                    <h1 class="text-white mb-4">We're Best in AI Industry with 10 Years of Experience</h1>
+                    <p class="text-light mb-4">Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed
+                        stet no labore lorem sit. Sanctus clita duo justo et tempor</p>
                     <div class="d-flex align-items-center text-white mb-3">
                         <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
                             <i class="fa fa-check"></i>
                         </div>
-                        <span>Mejora de la seguridad</span>
+                        <span>Diam dolor diam ipsum et tempor sit</span>
                     </div>
                     <div class="d-flex align-items-center text-white mb-3">
                         <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
                             <i class="fa fa-check"></i>
                         </div>
-                        <span>Mayor eficiencia y rapidez</span>
+                        <span>Diam dolor diam ipsum et tempor sit</span>
                     </div>
                     <div class="d-flex align-items-center text-white mb-3">
                         <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
                             <i class="fa fa-check"></i>
                         </div>
-                        <span>Personalización de la experiencia del usuario</span>
+                        <span>Diam dolor diam ipsum et tempor sit</span>
                     </div>
                     <div class="row g-4 pt-3">
                         <div class="col-sm-6">
@@ -277,7 +271,7 @@ Diam dolor diam ipsum et tempor sit</p>
                                 <i class="fa fa-users fa-3x text-white"></i>
                                 <div class="ms-3">
                                     <h2 class="text-white mb-0" data-toggle="counter-up">9999</h2>
-                                    <p class="text-white mb-0">Usuarios Felices</p>
+                                    <p class="text-white mb-0">Happy Clients</p>
                                 </div>
                             </div>
                         </div>
@@ -286,14 +280,14 @@ Diam dolor diam ipsum et tempor sit</p>
                                 <i class="fa fa-check fa-3x text-white"></i>
                                 <div class="ms-3">
                                     <h2 class="text-white mb-0" data-toggle="counter-up">9999</h2>
-                                    <p class="text-white mb-0">Proyectos Hechos</p>
+                                    <p class="text-white mb-0">Project Complete</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 align-self-end text-center text-md-end wow fadeIn" data-wow-delay="0.5s">
-                    <img class="img-fluid" src="{{ url_for('static', filename='img/feature.png') }}" alt="">
+                    <img class="img-fluid" src="img/feature.png" alt="">
                 </div>
             </div>
         </div>
@@ -306,38 +300,38 @@ Diam dolor diam ipsum et tempor sit</p>
         <div class="container py-5">
             <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
                 <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Case Study</div>
-                <h1 id="project" class="mb-4">Casos de implementación IA</h1>
+                <h1 class="mb-4">Explore Our Recent AI Case Studies</h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
                     <div class="case-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="{{ url_for('static', filename='img/project-1.jpg') }}" alt="">
+                        <img class="img-fluid" src="img/project-1.jpg" alt="">
                         <a class="case-overlay text-decoration-none" href="">
-                            <small>Automatización robótica</small>
-                            <!--<h5 class="lh-base text-white mb-3">Lorem elitr magna stet eirmod labore amet labore clita
-                            </h5>-->
+                            <small>Robotic Automation</small>
+                            <h5 class="lh-base text-white mb-3">Lorem elitr magna stet eirmod labore amet labore clita
+                            </h5>
                             <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
                     <div class="case-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="{{ url_for('static', filename='img/project-2.jpg') }}" alt="">
+                        <img class="img-fluid" src="img/project-2.jpg" alt="">
                         <a class="case-overlay text-decoration-none" href="">
-                            <small>Aprendizaje Automático</small>
-                            <!--<h5 class="lh-base text-white mb-3">Lorem elitr magna stet eirmod labore amet labore clita
-                            </h5>-->
+                            <small>Machine learning</small>
+                            <h5 class="lh-base text-white mb-3">Lorem elitr magna stet eirmod labore amet labore clita
+                            </h5>
                             <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-4 wow fadeIn" data-wow-delay="0.7s">
                     <div class="case-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="{{ url_for('static', filename='img/project-3.jpg') }}" alt="">
+                        <img class="img-fluid" src="img/project-3.jpg" alt="">
                         <a class="case-overlay text-decoration-none" href="">
-                            <small>Análisis predictivo</small>
-                            <!--<h5 class="lh-base text-white mb-3">Lorem elitr magna stet eirmod labore amet labore clita
-                            </h5>-->
+                            <small>Predictive Analysis</small>
+                            <h5 class="lh-base text-white mb-3">Lorem elitr magna stet eirmod labore amet labore clita
+                            </h5>
                             <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
                         </a>
                     </div>
@@ -353,7 +347,7 @@ Diam dolor diam ipsum et tempor sit</p>
         <div class="container py-5">
             <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
                 <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Popular FAQs</div>
-                <h1 class="mb-4">Preguntas frecuentes</h1>
+                <h1 class="mb-4">Frequently Asked Questions</h1>
             </div>
             <div class="row">
                 <div class="col-lg-6">
@@ -376,7 +370,7 @@ Diam dolor diam ipsum et tempor sit</p>
                             <h2 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    ¿Cuánto tiempo tardaré en tener un nuevo sitio web?
+                                    How long will it take to get a new website?
                                 </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
@@ -404,7 +398,7 @@ Diam dolor diam ipsum et tempor sit</p>
                             <h2 class="accordion-header" id="headingFour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                                    ¿Mi sitio web será compatible con dispositivos móviles?
+                                    Will my website be mobile-friendly?
                                 </button>
                             </h2>
                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
@@ -422,7 +416,7 @@ Diam dolor diam ipsum et tempor sit</p>
                             <h2 class="accordion-header" id="headingFive">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    ¿Mantendrás mi sitio por mí?
+                                    Will you maintain my site for me?
                                 </button>
                             </h2>
                             <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
@@ -436,7 +430,8 @@ Diam dolor diam ipsum et tempor sit</p>
                             <h2 class="accordion-header" id="headingSix">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-Tengo un presupuesto ajustado. ¿Tienes alguna opción económica?                                </button>
+                                    I’m on a strict budget. Do you have any low cost options?
+                                </button>
                             </h2>
                             <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
                                 data-bs-parent="#accordionFAQ2">
@@ -449,7 +444,7 @@ Tengo un presupuesto ajustado. ¿Tienes alguna opción económica?              
                             <h2 class="accordion-header" id="headingSeven">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                    ¿Mantendrás mi sitio por mí?
+                                    Will you maintain my site for me?
                                 </button>
                             </h2>
                             <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
@@ -463,7 +458,8 @@ Tengo un presupuesto ajustado. ¿Tienes alguna opción económica?              
                             <h2 class="accordion-header" id="headingEight">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-Tengo un presupuesto ajustado. ¿Tienes alguna opción económica?                                </button>
+                                    I’m on a strict budget. Do you have any low cost options?
+                                </button>
                             </h2>
                             <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
                                 data-bs-parent="#accordionFAQ2">
@@ -485,10 +481,12 @@ Tengo un presupuesto ajustado. ¿Tienes alguna opción económica?              
         <div class="container py-5">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
-                    <div id="team" class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Our Team</div>
-                    <h1 class="mb-4">Equipo de desarrollo</h1>
-                    <p class="mb-4">Estudiantes de la Fundación universitaria de Popayán, proyecto detección de rostros en tiempo real para acceso seguro 2024</p>
-                    <a class="btn btn-primary rounded-pill px-4" href="">Leer más</a>
+                    <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Our Team</div>
+                    <h1 class="mb-4">Meet Our Experienced Team Members</h1>
+                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam
+                        amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus
+                        clita duo justo et tempor eirmod magna dolore erat amet</p>
+                    <a class="btn btn-primary rounded-pill px-4" href="">Read More</a>
                 </div>
                 <div class="col-lg-7">
                     <div class="row g-4">
@@ -496,9 +494,9 @@ Tengo un presupuesto ajustado. ¿Tienes alguna opción económica?              
                             <div class="row g-4">
                                 <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
                                     <div class="team-item bg-white text-center rounded p-4 pt-0">
-                                        <img class="img-fluid rounded-circle p-4" src="{{ url_for('static', filename='img/team-1.jpg') }}" alt="">
+                                        <img class="img-fluid rounded-circle p-4" src="img/team-1.jpg" alt="">
                                         <h5 class="mb-0">Boris Johnson</h5>
-                                        <small>Fundación universitaria de popayán</small>
+                                        <small>Founder & CEO</small>
                                         <div class="d-flex justify-content-center mt-3">
                                             <a class="btn btn-square btn-primary m-1" href=""><i
                                                     class="fab fa-facebook-f"></i></a>
@@ -513,9 +511,9 @@ Tengo un presupuesto ajustado. ¿Tienes alguna opción económica?              
                                 </div>
                                 <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
                                     <div class="team-item bg-white text-center rounded p-4 pt-0">
-                                        <img class="img-fluid rounded-circle p-4" src="{{ url_for('static', filename='img/team-2.jpg') }}" alt="">
+                                        <img class="img-fluid rounded-circle p-4" src="img/team-2.jpg" alt="">
                                         <h5 class="mb-0">Adam Crew</h5>
-                                        <small>Gerente ejecutiva</small>
+                                        <small>Executive Manager</small>
                                         <div class="d-flex justify-content-center mt-3">
                                             <a class="btn btn-square btn-primary m-1" href=""><i
                                                     class="fab fa-facebook-f"></i></a>
@@ -534,9 +532,9 @@ Tengo un presupuesto ajustado. ¿Tienes alguna opción económica?              
                             <div class="row g-4">
                                 <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
                                     <div class="team-item bg-white text-center rounded p-4 pt-0">
-                                        <img class="img-fluid rounded-circle p-4" src="{{ url_for('static', filename='img/team-3.jpg') }}" alt="">
-                                        <h5 class="mb-0">Daniel Oretga</h5>
-                                        <small>Ingeniéro en sistemas</small>
+                                        <img class="img-fluid rounded-circle p-4" src="img/team-3.jpg" alt="">
+                                        <h5 class="mb-0">Kate Winslet</h5>
+                                        <small>Co Founder</small>
                                         <div class="d-flex justify-content-center mt-3">
                                             <a class="btn btn-square btn-primary m-1" href=""><i
                                                     class="fab fa-facebook-f"></i></a>
@@ -551,9 +549,9 @@ Tengo un presupuesto ajustado. ¿Tienes alguna opción económica?              
                                 </div>
                                 <div class="col-12 wow fadeIn" data-wow-delay="0.7s">
                                     <div class="team-item bg-white text-center rounded p-4 pt-0">
-                                        <img class="img-fluid rounded-circle p-4" src="{{ url_for('static', filename='img/team-4.jpg') }}" alt="">
+                                        <img class="img-fluid rounded-circle p-4" src="img/team-4.jpg" alt="">
                                         <h5 class="mb-0">Cody Gardner</h5>
-                                        <small>Gerente de proyecto</small>
+                                        <small>Project Manager</small>
                                         <div class="d-flex justify-content-center mt-3">
                                             <a class="btn btn-square btn-primary m-1" href=""><i
                                                     class="fab fa-facebook-f"></i></a>
@@ -578,15 +576,15 @@ Tengo un presupuesto ajustado. ¿Tienes alguna opción económica?              
 
     <!-- Testimonial Start -->
     <div class="container-xxl py-5">
-        <!--<div class="container py-5">
+        <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
                     <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Testimonial</div>
-                    <h1 id="question" class="mb-4">¡Qué dicen nuestros clientes!</h1>
+                    <h1 class="mb-4">What Say Our Clients!</h1>
                     <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam
                         amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus
                         clita duo justo et tempor eirmod magna dolore erat amet</p>
-                    <a class="btn btn-primary rounded-pill px-4" href="">Leer más</a>
+                    <a class="btn btn-primary rounded-pill px-4" href="">Read More</a>
                 </div>
                 <div class="col-lg-7 wow fadeIn" data-wow-delay="0.5s">
                     <div class="owl-carousel testimonial-carousel border-start border-primary">
@@ -594,11 +592,11 @@ Tengo un presupuesto ajustado. ¿Tienes alguna opción económica?              
                             <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                             <p class="fs-4">Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet</p>
                             <div class="d-flex align-items-center">
-                                <img class="img-fluid flex-shrink-0 rounded-circle" src="{{ url_for('static', filename='img/testimonial-1.jpg') }}"
+                                <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-1.jpg"
                                     style="width: 60px; height: 60px;">
                                 <div class="ps-3">
-                                    <h5 class="mb-1">Nombre del cliente</h5>
-                                    <span>Profesión</span>
+                                    <h5 class="mb-1">Client Name</h5>
+                                    <span>Profession</span>
                                 </div>
                             </div>
                         </div>
@@ -606,11 +604,11 @@ Tengo un presupuesto ajustado. ¿Tienes alguna opción económica?              
                             <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                             <p class="fs-4">Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet</p>
                             <div class="d-flex align-items-center">
-                                <img class="img-fluid flex-shrink-0 rounded-circle" src="{{ url_for('static', filename='img/testimonial-2.jpg') }}"
+                                <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-2.jpg"
                                     style="width: 60px; height: 60px;">
                                 <div class="ps-3">
-                                    <h5 class="mb-1">Nombre del cliente</h5>
-                                    <span>Profesión</span>
+                                    <h5 class="mb-1">Client Name</h5>
+                                    <span>Profession</span>
                                 </div>
                             </div>
                         </div>
@@ -621,15 +619,15 @@ Tengo un presupuesto ajustado. ¿Tienes alguna opción económica?              
                                 <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-3.jpg"
                                     style="width: 60px; height: 60px;">
                                 <div class="ps-3">
-                                    <h5 class="mb-1">Nombre del cliente</h5>
-                                    <span>Profesión</span>
+                                    <h5 class="mb-1">Client Name</h5>
+                                    <span>Profession</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>-->
+        </div>
     </div>
     <!-- Testimonial End -->
 
@@ -639,7 +637,7 @@ Tengo un presupuesto ajustado. ¿Tienes alguna opción económica?              
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-md-5 ps-lg-0 pt-5 pt-md-0 text-start wow fadeIn" data-wow-delay="0.3s">
-                    <img class="img-fluid" src="{{ url_for('static', filename='img/newsletter.png') }}" alt="">
+                    <img class="img-fluid" src="img/newsletter.png" alt="">
                 </div>
                 <div class="col-md-7 py-5 newsletter-text wow fadeIn" data-wow-delay="0.5s">
                     <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">Newsletter</div>
@@ -660,19 +658,21 @@ Tengo un presupuesto ajustado. ¿Tienes alguna opción económica?              
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white-50 footer pt-5">
-        <div id="contact" class="container py-5">
+        <div class="container py-5">
             <div class="row g-5">
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
                     <a href="index.html" class="d-inline-block mb-3">
                         <h1 class="text-white">AI<span class="text-primary">.</span>Tech</h1>
                     </a>
-                    <p class="mb-0">El proyecto es una aplicación web desarrollada con Flask que utiliza reconocimiento facial en tiempo real para permitir un acceso seguro. Integra las bibliotecas face_recognition y OpenCV para capturar y analizar rostros, validando la identidad de los usuarios antes de otorgar acceso.</p>
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam
+                        amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus
+                        clita duo justo et tempor</p>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                     <h5 class="text-white mb-4">Get In Touch</h5>
                     <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+57 3135125915</p>
-                    <p><i class="fa fa-envelope me-3"></i>ortegadaniel588@gmail.com</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -703,16 +703,16 @@ Tengo un presupuesto ajustado. ¿Tienes alguna opción económica?              
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Daniel Ortega</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
 
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Fundación universitaria Popayán <!--<a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>-->
+                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
-                            <a href="">Inicio</a>
+                            <a href="">Home</a>
                             <a href="">Cookies</a>
-                            <a href="">Ayuda</a>
+                            <a href="">Help</a>
                             <a href="">FAQs</a>
                         </div>
                     </div>
@@ -727,18 +727,17 @@ Tengo un presupuesto ajustado. ¿Tienes alguna opción económica?              
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
 
 
-<!-- JavaScript Libraries -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="{{ url_for('static', filename='lib/wow/wow.min.js') }}"></script>
-<script src="{{ url_for('static', filename='lib/easing/easing.min.js') }}"></script>
-<script src="{{ url_for('static', filename='lib/waypoints/waypoints.min.js') }}"></script>
-<script src="{{ url_for('static', filename='lib/counterup/counterup.min.js') }}"></script>
-<script src="{{ url_for('static', filename='lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-<!-- Template Javascript -->
-<script src="{{ url_for('static', filename='js/main.js') }}"></script>
-
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
