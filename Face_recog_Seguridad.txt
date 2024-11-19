@@ -37,25 +37,27 @@ def gen_frame():
         face_encodings = face_recognition.face_encodings(rgb_frame, face_locations)
 
         for (top, right, bottom, left), face_encoding in zip(face_locations, face_encodings):
+            # Comparar el rostro actual con los rostros conocidos
             matches = face_recognition.compare_faces(known_face_encodings, face_encoding)
-            name = "Desconocido"
+            name = "Acceso denegado"  # Por defecto, desconocido
 
-            # Usar el rostro reconocido con menor distancia
+            # Calcular las distancias y encontrar el mejor emparejamiento
             face_distances = face_recognition.face_distance(known_face_encodings, face_encoding)
             best_match_index = np.argmin(face_distances)
             if matches[best_match_index]:
                 name = known_face_names[best_match_index]
 
-            # Dibujar un rectángulo alrededor del rostro y poner el nombre
-            #cv2.rectangle(frame, (left, top), (right, bottom), (0, 255, 0), 2)
-            #cv2.putText(frame, name, (left + 6, bottom - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 1)
+            # Elegir el color basado en si el rostro es conocido o no
+            if name == "Acceso denegado":
+                color = (0, 0, 255)  # Rojo para desconocidos
+            else:
+                color = (0, 255, 0)  # Verde para conocidos
 
-            # Dibujar un rectángulo alrededor del rostro con un borde más grueso
-            cv2.rectangle(frame, (left, top), (right, bottom), (0, 255, 0), 3)
-            # Poner el nombre encima del recuadro
-            cv2.putText(frame, name, (left, top - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2)
+            # Dibujar el rectángulo alrededor del rostro
+            cv2.rectangle(frame, (left, top), (right, bottom), color, 3)
 
-
+            # Poner el texto encima del rectángulo
+            cv2.putText(frame, name, (left, top - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.8, color, 2)
 
         # Codificar la imagen en formato JPEG
         suc, encode = cv2.imencode('.jpg', frame)
@@ -70,7 +72,7 @@ app = Flask(__name__)
 # Ruta principal
 @app.route('/')
 def index():
-    return render_template('Index.html')
+    return render_template('AI-html-1.0.0/index.html')
 
 # Ruta de video
 @app.route('/video')
